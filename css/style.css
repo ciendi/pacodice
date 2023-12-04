@@ -1,16 +1,15 @@
-
-.container-fluid{
+.container-fluid {
     background: #1a3052;
     width: 1000vw;
     height: 1000hw;
     top: 0;
+    margin-top: 0;
     inset: 0;
- 
+    place-content: center;
 }
 
 section {
     position: absolute;
-    border-top: 50%;
     background: rgb(6, 69, 71);
     width: 100vw;
     height: 100hw;
@@ -18,21 +17,33 @@ section {
     inset: 0;
     display: grid;
     font-size: 48px;
-
+    place-content: center;
 }
 
 p {
     color: blue;
-    padding-top: 20%;
-    font-family: 'Ephesis', cursive;
     font-family: 'Pixelify Sans', sans-serif;
+  
+
+    width: 45px;
+    height: 45px;
+    
+    /* centrar vertical y horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px; /* aplicar a top y al margen izquierdo un valor negativo para completar el centrado del elemento hijo */
+  
 }
+
 h1 {
-    color: blue;    
+    color: blue;
     padding-top: 20%;
     font-family: 'Ephesis', cursive;
-    font-family:  'Rubik Bubbles', sans-serif;
+    font-family: 'Rubik Bubbles', sans-serif;
+
 }
+
 .botones {
     display: grid;
     place-content: center;
@@ -44,7 +55,7 @@ h1 {
     border: none;
     color: white;
     padding: 10px 25px;
-
+    cursor: pointer;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
