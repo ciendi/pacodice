@@ -1,2 +1,2 @@
 # pacodice
-juego paco says
+juego paco dice
