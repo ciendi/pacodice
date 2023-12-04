@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paco dice</title>
     <script src="js/d3.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         .boton {
@@ -18,26 +19,44 @@
             padding-top: 70px;
         }
     </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Pixelify+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Pixelify+Sans&family=Rubik+Bubbles&display=swap');
+    </style>
 </head>
 
 <body>
- 
-<main class="container-fluid">
     <div class="row text-center">
-        <section>Comenzar Paco dice</section>
-        <div class="col-12">
-            <h1>Paco Dice</h1>
-        </div>
-        <div class="col-12 table-responsive">
-            <br>
-            <div id="contenedorJuego"></div>
-            <br>
-            <br><button id="comenzar" class="mb-2 btn btn-success">Comenzar</button>
-            <br><button id="reiniciar" class="mb-2 btn btn-success">Reiniciar</button>
-            
-        </div>
+        <section>
+            <p>Toca para<Br> Comenzar<Br> Paco dice</p>
+        </section>
     </div>
-</main>
-<script src="js/game.js"></script>
+    <div class="container-fluid mt-0">
+
+        <div class="titulo">
+            <h1><marquee>¡¡A ver si me ganas!!</marquee></h1>
+            <br>
+            <div class="col-12 table-responsive">
+                <div id="contenedorJuego"></div>
+            </div>
+            <br>
+        </div>
+
+        <div class="botones">
+            <div class="d-grid gap-2 d-md-block">
+                <button id="comenzar" class="button">Comenzar</button>
+                <button id="reiniciar" class="button">Reiniciar</button>
+            </div>
+        </div>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       
+        
+    </div>
+    <script src="js/game.js"></script>
 </body>
+
 </html>

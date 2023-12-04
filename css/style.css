@@ -1,20 +1,59 @@
-body{
-    margin: 0;
-    padding: 0;
-    display: grid;
-    place-content: center;
+
+.container-fluid{
+    background: #1a3052;
+    width: 1000vw;
+    height: 1000hw;
+    top: 0;
+    inset: 0;
+ 
 }
-#premio{
-    display: none;
-}
-section{
+
+section {
     position: absolute;
-    background: black;
+    border-top: 50%;
+    background: rgb(6, 69, 71);
     width: 100vw;
     height: 100hw;
     top: 0;
     inset: 0;
     display: grid;
     font-size: 48px;
+
+}
+
+p {
+    color: blue;
+    padding-top: 20%;
+    font-family: 'Ephesis', cursive;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+h1 {
+    color: blue;    
+    padding-top: 20%;
+    font-family: 'Ephesis', cursive;
+    font-family:  'Rubik Bubbles', sans-serif;
+}
+.botones {
+    display: grid;
+    place-content: center;
+}
+
+.button {
+    font-family: 'Rubik Bubbles', sans-serif;
+    background-color: rgb(75, 30, 181);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.titulo {
+    display: grid;
+    font-size: 35px;
     place-content: center;
 }

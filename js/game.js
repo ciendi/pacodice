@@ -1,18 +1,19 @@
 const $section = document.querySelector("section")
-$section.addEventListener('click', () =>{
+$section.addEventListener('click', () => {
     juego();
     $section.remove();
-    
-    
+
+
     const audio = new window.Audio('./tetris.mp3');
     audio.volume = 0.2;
     audio.play();
-    
+    audio.loop = "loop";
+
 
 })
 
 const juego = () => {
-    
+
     const sleep = m => new Promise(r => setTimeout(r, m));
     const cargarSonido = function (fuente) {
         const sonido = document.createElement("audio");
@@ -31,7 +32,7 @@ const juego = () => {
     const distancia = 10;
     const gamma = 2;
     const milisegundosCpu = 200,
-        milisegundosUsuario = 100;
+        milisegundosUsuario = 80;
     const sonidoSuperiorIzquierda = cargarSonido("1.mp3"),
         sonidoSuperiorDerecha = cargarSonido("2.mp3"),
         sonidoInferiorIzquierda = cargarSonido("3.mp3"),
@@ -39,7 +40,7 @@ const juego = () => {
         sonidoPartidaPerdida = cargarSonido("loser.mp3"),
         sonidoPartidaInicial = cargarSonido("inicialsound.mp3")
         ;
-        
+
 
     let puedeJugar = false;
     let contador = 0;
@@ -238,7 +239,7 @@ const juego = () => {
         $btnReiniciar.disabled = false;
         reiniciar();
         turnoDelCpu();
-        
+
     });
     const $btnReiniciar = document.querySelector("#reiniciar");
     $btnReiniciar.addEventListener("click", () => {
