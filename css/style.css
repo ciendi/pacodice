@@ -1,16 +1,16 @@
-.container-fluid {
-    background: #1a3052;
+.container {
+    background: #9253ea;
     width: 1000vw;
     height: 1000hw;
     top: 0;
     margin-top: 0;
     inset: 0;
     place-content: center;
+    display: grid;
 }
-
 section {
     position: absolute;
-    background: rgb(6, 69, 71);
+    background-color: #9253ea;
     width: 100vw;
     height: 100hw;
     top: 0;
@@ -19,19 +19,25 @@ section {
     font-size: 48px;
     place-content: center;
 }
-
+titulo {
+    position: absolute;
+    width: 10vw;
+    height: 10hw;
+    top: 0;
+    inset: 0;
+    display: grid;
+    place-content: center;
+}
 p {
-    color: blue;
+    color: black;
     font-family: 'Pixelify Sans', sans-serif;
     text-align: center;
 }
 
 h1 {
-    color: blue;
-    padding-top: 20%;
-    font-family: 'Ephesis', cursive;
+    color: black;
     font-family: 'Rubik Bubbles', sans-serif;
-
+    text-align: center;
 }
 
 .botones {
@@ -53,8 +59,3 @@ h1 {
     font-size: 16px;
 }
 
-.titulo {
-    display: grid;
-    font-size: 35px;
-    place-content: center;
-}

@@ -2,14 +2,10 @@ const $section = document.querySelector("section")
 $section.addEventListener('click', () => {
     juego();
     $section.remove();
-
-
     const audio = new window.Audio('./tetris.mp3');
     audio.volume = 0.2;
     audio.play();
     audio.loop = "loop";
-
-
 })
 
 const juego = () => {
@@ -25,10 +21,10 @@ const juego = () => {
         return sonido;
     }
     const partidoEn16 = (Math.PI * 2) / 16;
-    const centroX = 180, centroY = 180;
+    const centroX = 200, centroY = 200;
     const radioCirculo = 200;
     const radioCuarto = 170;
-    const radioCirculoCentral = 0;
+    const radioCirculoCentral = 40;
     const distancia = 8;
     const gamma = 2;
     const milisegundosCpu = 200,
@@ -68,8 +64,8 @@ const juego = () => {
 
     const $svg = d3.select("#contenedorJuego")
         .append("svg")
-        .attr('width', 350)
-        .attr('height', 350);
+        .attr('width', 400)
+        .attr('height', 400);
 
     $svg.append("g")
         .attr("transform", `translate(${centroX},${centroY})`)
@@ -212,7 +208,7 @@ const juego = () => {
             } else {
                 sonidoQueSeReproduce = sonidoPartidaPerdida;
                 $btnComenzar.disabled = false;
-                Swal.fire("Perdiste", `Has perdido. Tu puntuación fue de ${puntaje}. Puedes jugar de nuevo cuando quieras`);
+                Swal.fire("Perdiste", `Has perdido.<br> Tu puntuación fue de ${puntaje}.`);
                 sonidoQueSeReproduce.currentTime = 0;
                 await sonidoQueSeReproduce.play();
                 boton.attr("fill", d3.color(colorActual).brighter(gamma))
