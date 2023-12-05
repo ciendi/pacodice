@@ -25,11 +25,11 @@ const juego = () => {
         return sonido;
     }
     const partidoEn16 = (Math.PI * 2) / 16;
-    const centroX = 200, centroY = 200;
+    const centroX = 180, centroY = 180;
     const radioCirculo = 200;
     const radioCuarto = 170;
-    const radioCirculoCentral = 80;
-    const distancia = 10;
+    const radioCirculoCentral = 0;
+    const distancia = 8;
     const gamma = 2;
     const milisegundosCpu = 200,
         milisegundosUsuario = 80;
@@ -68,8 +68,8 @@ const juego = () => {
 
     const $svg = d3.select("#contenedorJuego")
         .append("svg")
-        .attr('width', 400)
-        .attr('height', 400);
+        .attr('width', 350)
+        .attr('height', 350);
 
     $svg.append("g")
         .attr("transform", `translate(${centroX},${centroY})`)
