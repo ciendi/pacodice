@@ -1,15 +1,31 @@
 const $section = document.querySelector("section")
+const audio = new window.Audio('./tetris.mp3');
+var contador = document.getElementById("contador").click;
+var cont = 0;
+const musica = "img/musica.png";
+const nomusica = "img/nomusica.png";
+
+function silenciarAudio() {
+    cont++;
+    if (cont == 1) {
+        audio.volume = 0.0;
+        document.getElementById("contador").src = "./img/nomusica.png";
+
+    }else if(cont == 2){
+        audio.volume = 0.2;
+        document.getElementById("contador").src = "./img/musica.png";
+        cont = 0;
+
+    }
+}
 $section.addEventListener('click', () => {
     juego();
     $section.remove();
-    const audio = new window.Audio('./tetris.mp3');
     audio.volume = 0.2;
     audio.play();
     audio.loop = "loop";
 })
-
 const juego = () => {
-
     const sleep = m => new Promise(r => setTimeout(r, m));
     const cargarSonido = function (fuente) {
         const sonido = document.createElement("audio");

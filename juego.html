@@ -18,6 +18,26 @@
             padding-top: 70px;
         }
     </style>
+    <script>
+        // Selecciona la sección que contiene el audio
+        const $section = document.querySelector("section");
+
+        // Busca el primer elemento <audio> dentro de la sección
+        const audioElement = $section.querySelector("audio");
+
+        function pauseAudio() {
+            if (audioElement) {
+                audioElement.pause();
+                console.log("Audio pausado.");
+            } else {
+                console.log("No se encontró ningún elemento de audio en la sección.");
+            }
+        }
+
+        // Escucha los eventos beforeunload y pagehide para pausar el audio
+        window.addEventListener("beforeunload", pauseAudio);
+        window.addEventListener("pagehide", pauseAudio);
+    </script>
 </head>
 
 <body>
