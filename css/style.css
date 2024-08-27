@@ -2,6 +2,10 @@
     font-family: bubbly;
     src: url(../splash/Super_Bubbly.ttf);
 }
+@font-face {
+    font-family: dacherry;
+    src: url(../splash/Dacherry.ttf);
+}
 .container-fluid {
     position: absolute;
     background: #200c3d;
@@ -24,14 +28,24 @@ section {
     font-size: 48px;
     place-content: center;
 }
-p {
-    color: black;
+.parrafo {
+    color: white;
     font-family: 'Pixelify Sans', sans-serif;
     text-align: center;
+    font-size: medium;
+    position: initial;
 }
-
-h1 {
-    color: black;
+.pacodice {
+    position: relative;
+    margin-top:0;
+    margin-bottom:0;
+    color: white;
+    font-family: dacherry;
+    font-size: 120px;
+    text-align: center;
+}
+H1 {
+    color: white;
     font-family: bubbly;
     text-align: center;
 }

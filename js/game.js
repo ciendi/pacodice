@@ -1,9 +1,11 @@
 const $section = document.querySelector("section")
-const audio = new window.Audio('./tetris.mp3');
+const audio = new window.Audio('./sonidoinicial.mp3');
 var contador = document.getElementById("contador").click;
 var cont = 0;
-const musica = "img/musica.png";
-const nomusica = "img/nomusica.png";
+
+function accionPlay(){  
+    
+}
 
 function silenciarAudio() {
     cont++;
@@ -43,13 +45,12 @@ const juego = () => {
     const distancia = 8;
     const gamma = 2;
     const milisegundosCpu = 200,
-        milisegundosUsuario = 80;
+        milisegundosUsuario = 90;
     const sonidoSuperiorIzquierda = cargarSonido("1.mp3"),
         sonidoSuperiorDerecha = cargarSonido("2.mp3"),
         sonidoInferiorIzquierda = cargarSonido("3.mp3"),
         sonidoInferiorDerecha = cargarSonido("4.mp3"),
-        sonidoPartidaPerdida = cargarSonido("loser.mp3"),
-        sonidoPartidaInicial = cargarSonido("inicialsound.mp3")
+        sonidoPartidaPerdida = cargarSonido("loser.mp3")
         ;
 
 
