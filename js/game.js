@@ -10,19 +10,18 @@ function silenciarAudio() {
     if (cont == 1) {
         audio.volume = 0.0;
         document.getElementById("contador").src = "./img/nomusica.png";
-
     }else if(cont == 2){
         audio.volume = 0.2;
         document.getElementById("contador").src = "./img/musica.png";
         cont = 0;
-
     }
 }
+//quitar la primera pantalla
 $section.addEventListener('click', () => {
     juego();
     $section.remove();
-    audio.volume = 0.2;
     audio.play();
+    audio.volume = 0.2;
     audio.loop = "loop";
 })
 const juego = () => {
@@ -102,7 +101,6 @@ const juego = () => {
                 .endAngle(partidoEn16 * 16)
         )
         .attr("fill", verde);
-
 
     const superiorDerecha = $svg.append("g")
         .attr("transform", `translate(${centroX + distancia},${centroY - distancia})`)
