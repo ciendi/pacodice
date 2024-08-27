@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paco dice</title>
+    <script src="js/d3.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Pixelify+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Pixelify+Sans&family=Rubik+Bubbles&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <p>Toca para<Br> Comenzar<Br> Paco dice</p>
+        </section>
+    
+        <div class="titulo">
+            <h1>"Veamos qué tan lejos puedes llegar."</h1>
+                <div id="contenedorJuego"></div>
+            <br>    
+        </div>
+
+    <div class="botones">
+        <div class="d-grid gap-2 d-md-block">
+          
+            <img class="imag" onclick="silenciarAudio()" height="36px" width="36px" src="img/musica.png" id="contador" alt="audio icon">
+            
+            <button id="comenzar" class="button">Comenzar</button>
+            <button id="reiniciar" class="button">Reiniciar</button>
+        </div>
+    </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+
+</html>

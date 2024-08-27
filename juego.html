@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Paco dice</title>
+    <script src="js/d3.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .boton {
+            cursor: pointer;
+        }
+
+        body {
+            padding-bottom: 70px;
+            padding-top: 70px;
+        }
+    </style>
+    <script>
+        // Selecciona la sección que contiene el audio
+        const $section = document.querySelector("section");
+
+        // Busca el primer elemento <audio> dentro de la sección
+        const audioElement = $section.querySelector("audio");
+
+        function pauseAudio() {
+            if (audioElement) {
+                audioElement.pause();
+                console.log("Audio pausado.");
+            } else {
+                console.log("No se encontró ningún elemento de audio en la sección.");
+            }
+        }
+
+        // Escucha los eventos beforeunload y pagehide para pausar el audio
+        window.addEventListener("beforeunload", pauseAudio);
+        window.addEventListener("pagehide", pauseAudio);
+    </script>
+</head>
+
+<body>
+   
+<div class="container-fluid">
+    <div class="row text-center">
+      
+        <div id="mostrar">
+            <div class="col-12">
+                <h1>Paco Dice</h1>
+            </div>
+            <div class="col-12 table-responsive">
+                <br>
+                <div id="contenedorJuego">
+                    
+                </div>
+                <br>
+                <br><button id="comenzar" class="mb-2 btn btn-success">Comenzar</button>
+                <br><button id="reiniciar" class="mb-2 btn btn-success">Reiniciar</button>
+                
+            </div>
+        </div>
+      
+    </div>
+</div>
+<script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.container {
+    background: #9253ea;
+    width: 1000vw;
+    height: 1000hw;
+    top: 0;
+    margin-top: 0;
+    inset: 0;
+    place-content: center;
+    display: grid;
+}
+section {
+    position: absolute;
+    background: #9253ea;
+    width: 100vw;
+    height: 100hw;
+    top: 0;
+    inset: 0;
+    display: grid;
+    font-size: 48px;
+    place-content: center;
+}
+titulo {
+    position: absolute;
+    width: 10vw;
+    height: 10hw;
+    top: 0;
+    inset: 0;
+    display: grid;
+    place-content: center;
+}
+p {
+    color: black;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-family: 'Rubik Bubbles', sans-serif;
+    text-align: center;
+}
+
+.botones {
+    display: grid;
+    place-content: center;
+}
+
+.button {
+    font-family: 'Rubik Bubbles', sans-serif;
+    background-color: rgb(75, 30, 181);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.imag{
+    cursor: pointer;
+}
+
