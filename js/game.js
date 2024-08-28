@@ -3,10 +3,6 @@ const audio = new window.Audio('./sonidoinicial.mp3');
 var contador = document.getElementById("contador").click;
 var cont = 0;
 
-function accionPlay(){  
-    
-}
-
 function silenciarAudio() {
     cont++;
     if (cont == 1) {
@@ -26,6 +22,10 @@ $section.addEventListener('click', () => {
     audio.volume = 0.2;
     audio.loop = "loop";
 })
+function removeSection() {
+    const section = document.querySelector('section');
+    section.remove();
+}
 const juego = () => {
     const sleep = m => new Promise(r => setTimeout(r, m));
     const cargarSonido = function (fuente) {
@@ -80,8 +80,8 @@ const juego = () => {
 
     const $svg = d3.select("#contenedorJuego")
         .append("svg")
-        .attr('width', 400)
-        .attr('height', 400);
+        .attr('width', 600)
+        .attr('height', 600);
 
     $svg.append("g")
         .attr("transform", `translate(${centroX},${centroY})`)

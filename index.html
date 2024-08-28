@@ -11,27 +11,78 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Pixelify+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Pixelify+Sans&family=Rubik+Bubbles&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        #contador {
+            background-color: #f0f0f0;
+    position: fixed; /* Fija la imagen en la ventana de visualización */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Ajusta la distancia desde el borde derecho */
+    z-index: 1000; /* Asegura que la imagen esté sobre otros elementos */
+}
+        section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #200c3d;
+            z-index: 10;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+        }
+
+        #contenedorJuego {
+            width: 400px; /* Establece un ancho específico */
+            height: 400px; /* Establece una altura específica */
+          background-color: #200c3d; /* Añade un color de fondo para verificar que el div está allí */
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 10px auto;
+        }
+        .button-container {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px; /* Espacio superior, ajusta según sea necesario */
+}
+
+        .imag {
+            display: block;
+            margin: 0 auto 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <section>
+    <div class="container-fluid text-center">
+        <!-- Sección que actúa como pantalla principal -->
+        <section onclick="removeSection()">
             <p class="pacodice">Paco</p>
             <p class="pacodice">Dice</p>
             <p class="parrafo">Toca para Comenzar</p>
         </section>
-        <div>
-            <h1>"VEAMOS QUE TAN LEJOS PUEDES LLEGAR."</h1>
-                <div id="contenedorJuego"></div>
-            <br>    
-        </div>
-        <div>
-            <img class="imag" onclick="silenciarAudio()" height="36px" width="36px" src="img/musica.png" id="contador" alt="audio icon">
-            <button id="comenzar" class="button">COMENZAR</button>
-            <button id="reiniciar" class="button">REINICIAR</button>
-        </div>
 
+        <!-- Contenedor del juego -->
+        <div id="contenedorJuego">
+            <!-- Contenido del juego -->
+        </div>
+        <button id="comenzar" class="button btn btn-primary">COMENZAR</button>
+        <button id="reiniciar" class="button btn btn-secondary">REINICIAR</button>
+        <img class="imag" onclick="silenciarAudio()" height="36px" width="36px" src="img/musica.png" id="contador" alt="audio icon">
     </div>
-    <script src="js/game.js"></script>
+    <script src="./js/game.js"></script>
 </body>
 </html>
