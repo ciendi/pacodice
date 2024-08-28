@@ -22,8 +22,8 @@
         #contador {
             background-color: #f0f0f0;
     position: fixed; /* Fija la imagen en la ventana de visualización */
-    top: 10px; /* Ajusta la distancia desde la parte superior */
-    right: 10px; /* Ajusta la distancia desde el borde derecho */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
     z-index: 1000; /* Asegura que la imagen esté sobre otros elementos */
 }
         section {
@@ -43,23 +43,17 @@
         }
 
         #contenedorJuego {
-            width: 400px; /* Establece un ancho específico */
-            height: 400px; /* Establece una altura específica */
-          background-color: #200c3d; /* Añade un color de fondo para verificar que el div está allí */
+            width: 350px; /* Establece un ancho específico */
+            height: 350px; /* Establece una altura específica */
+            background-color: #200c3d; /* Añade un color de fondo para verificar que el div está allí */
         }
 
         .button {
             display: block;
-            width: 100%;
+            width: 90%;
             max-width: 200px;
             margin: 10px auto;
         }
-        .button-container {
-    display: flex; /* Utiliza flexbox para alinear los elementos */
-    gap: 10px; /* Espacio entre los botones */
-    margin-top: 10px; /* Espacio superior, ajusta según sea necesario */
-}
-
         .imag {
             display: block;
             margin: 0 auto 20px;
@@ -79,9 +73,11 @@
         <div id="contenedorJuego">
             <!-- Contenido del juego -->
         </div>
-        <button id="comenzar" class="button btn btn-primary">COMENZAR</button>
-        <button id="reiniciar" class="button btn btn-secondary">REINICIAR</button>
-        <img class="imag" onclick="silenciarAudio()" height="36px" width="36px" src="img/musica.png" id="contador" alt="audio icon">
+        <div style="display: flex; justify-content: center; margin-top: 50px;">
+            <button id="comenzar" class="button btn btn-primary">COMENZAR</button>
+            <button id="reiniciar" class="button btn btn-secondary">REINICIAR</button>
+        </div>
+        <img class="imag" onclick="silenciarAudio()" height="40px" width="40px" src="img/musica.png" id="contador" alt="audio icon">
     </div>
     <script src="./js/game.js"></script>
 </body>
